@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="template/styles/css/style.css" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css" />
+	<link href="http://vjs.zencdn.net/6.2.0/video-js.css" rel="stylesheet">
+
+	<!-- Scripts -->
+	<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+  	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  	<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	<script src="template/scripts/libs.js"></script>
+	<script src="template/scripts/common.js"></script>
+	
+	<!--[if lt IE 9]>
+	   	<script>
+	      document.createElement('header');
+	      document.createElement('nav');
+	      document.createElement('main');
+	      document.createElement('section');
+	      document.createElement('article');
+	      document.createElement('aside');
+	      document.createElement('footer');
+	   	</script>
+	<![endif]-->
+</head>
+<body>
+	<div class="panel">
+		<div class="container row">
+			<div class="panel__logo col"><img src="upload/logo.png" alt=""></div>
+			<div class="panel__content col right">
+				<div class="panel__blocks">
+					<div class="panel__phone"><i class="icon icon-phone"></i><a href="">+ 7 /495/ <span>638 54 81</span></a></div>
+					<div class="panel__lang">
+						<ul>
+							<li class="selected"><a href="">рус</a></li>
+							<li><a href="">eng</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="panel__nav">
+					<ul>
+						<li class="selected"><a href="">О компании</a></li>
+						<li><a href="">Клиенты</a></li>
+						<li><a href="">Партнёры</a></li>
+						<li><a href="">Новости</a></li>
+						<li><a href="">Поддержка</a></li>
+						<li><a href="">Карьера</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="header">
+		<div class="container">
+			<div class="header__title title">ZOZO RCAM <span class="c-orange">[Создаём методологию]</span></div>
+			<div class="header__desc subtitle">Управление доходностью и уровнем сервиса</div>
+			<div class="video">
+				<div class="video__title title">Интересует как?</div>
+				<a href="#contacts" class="video__button button button_orange center block go-contacts"><span>Свяжитесь с нами</span></a>
+				<div class="video__wrap center">
+					<video id="my-video" class="video-js" controls preload="auto" width="500" height="300" data-setup="{}">
+						<source src="upload/video.mp4" type='video/mp4'>
+						<!-- <source src="MY_VIDEO.webm" type='video/webm'> -->
+						<p class="vjs-no-js"></p>
+					</video>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="section nums shadow">
+			<div class="container">
+				<div class="nums__title title">Потенциальный бизнес-эффект <br />от внедрения ZOZO RCAM</div>
+				<div class="nums__desc subtitle">Результаты получены во время реализации пилотных проектов*</div>
+				<div class="nums__list row row_3 row_inline">
+					<div class="num col">
+						<div class="num__count circle"><div class="num__wrap">до<span>80%</span></div></div>
+						<div class="num__text"><p>Снижение затрат на сверхурочные (уменьшение количества переработок)</p></div>
+					</div>
+					<div class="num col">
+						<div class="num__count circle"><div class="num__wrap">более<span>60%</span></div></div>
+						<div class="num__text"><p>Снижение затрат на операционную деятельность по составлению графиков</p></div>
+					</div>
+					<div class="num col">
+						<div class="num__count circle"><div class="num__wrap">до<span>10%</span></div></div>
+						<div class="num__text"><p>Экономия ФОТ за счет достоверного учета (исключение мошенничества)</p></div>
+					</div>
+					<div class="num col">
+						<div class="num__count circle"><div class="num__wrap">до<span>20%</span></div></div>
+						<div class="num__text"><p>Снижение потерь (упущенная выгода из-за отсутствия нужного персонала)</p></div>
+					</div>
+					<div class="num col">
+						<div class="num__count circle"><div class="num__wrap">более<span>45%</span></div></div>
+						<div class="num__text"><p>Повышение уровня сервиса (качество покрытия трафика)</p></div>
+					</div>
+					<div class="num col">
+						<div class="num__count circle"><div class="num__wrap">более<span>15%</span></div></div>
+						<div class="num__text"><p>Экономия ФОТ при использовании гибких смен</p></div>
+					</div>
+				</div>
+				<div class="nums__text">*в зависимости от выбора стратегии и ожидаемого эффекта</div>
+			</div>
+		</section>
+		<section class="section func">
+			<div class="container">
+				<div class="func__title title">Функциональность и модули системы</div>
+				<div class="func__list row center">
+					<div class="func__left col">
+						<div class="func__item row">
+							<div class="func__text col">Организационная <br />структура</div>
+							<div class="func__icon col"><i class="icon icon-str"></i></div>
+						</div>
+						<div class="func__item row">
+							<div class="func__text col">Управление <br />качеством данных</div>
+							<div class="func__icon col"><i class="icon icon-hdd"></i></div>
+						</div>
+						<div class="func__item row">
+							<div class="func__text col">Прогнозирование <br />бизнес-драйверов</div>
+							<div class="func__icon col"><i class="icon icon-statistic"></i></div>
+						</div>
+						<div class="func__item row">
+							<div class="func__text col">Планирование <br />расписания</div>
+							<div class="func__icon col"><i class="icon icon-calendar"></i></div>
+						</div>
+					</div>
+					<div class="func__right right col">
+						<div class="func__item row">
+							<div class="func__text col">Управление <br />отсутствиями</div>
+							<div class="func__icon col"><i class="icon icon-time"></i></div>
+						</div>
+						<div class="func__item row">
+							<div class="func__text col">Ведение <br />табелей</div>
+							<div class="func__icon col"><i class="icon icon-calc"></i></div>
+						</div>
+						<div class="func__item row">
+							<div class="func__text col">Управление <br />заданиями</div>
+							<div class="func__icon col"><i class="icon icon-list"></i></div>
+						</div>
+						<div class="func__item row">
+							<div class="func__text col pt">Аналитика</div>
+							<div class="func__icon col"><i class="icon icon-round"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section know shadow">
+			<div class="container">
+				<div class="know__title title">ZOZO знает</div>
+				<div class="know__list">
+					<div class="know__item row">
+						<div class="know__img col"><img src="upload/know/org.png" alt=""></div>
+						<div class="know__content col">
+							<div class="know__subtitle">как Управлять <br />организационной структурой</div>
+							<div class="know__text">Модуль «Организационная структура» <br />обеспечивает удобную работу с основными <br />данными оргструктуры компании и сотрудников, <br />включая назначения, навыки, квалификацию, <br />данные о сертификатах и образовании.</div>
+							<div class="know__ul ul">
+								<ul>
+									<li>Гибкая иерархия;</li>
+									<li>Ведение штатного расписания;</li>
+									<li>Управление навыками;</li>
+									<li>Интеграция с внешними источниками данных.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="know__item row">
+						<div class="know__img col"><img src="upload/know/quality.png" alt=""></div>
+						<div class="know__content col">
+							<div class="know__subtitle">Как обеспечить качество данных</div>
+							<div class="know__text">Чтобы гарантировать качество на выходе системы необходимо позаботиться о качестве исходных данных. Модуль «Управление качеством данных» позволяет сделать ваши данные по-настоящему рабочим инструментом и источником ценной информации.</div>
+							<div class="know__ul ul">
+								<ul>
+									<li>Анализ и профилирование;</li>
+									<li>Очистка;</li>
+									<li>Администрирование;</li>
+									<li>Обогащение.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="know__item row">
+						<div class="know__img col"><img src="upload/know/forecast.png" alt=""></div>
+						<div class="know__content col">
+							<div class="know__subtitle">Как построить правильный прогноз</div>
+							<div class="know__text">Модуль «Прогнозирование бизнес-драйверов» позволяет делать прогнозы в отношении ключевых показателей (бизнес-драйверов) влияющих на численность и расстановку персонала.</div>
+							<div class="know__ul ul">
+								<ul>
+									<li>Выбор прогнозной модели;</li>
+									<li>Выбор организационного уровня прогнозирования;</li>
+									<li>Учёт экспертных оценок и трендов;</li>
+									<li>Высокая точность прогнозирования.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="know__item row">
+						<div class="know__img col"><img src="upload/know/staff.png" alt=""></div>
+						<div class="know__content col">
+							<div class="know__subtitle">Как эффективно <br />распределить персонал</div>
+							<div class="know__text">Модуль «Планирование расписания» отвечает за построение оптимального расписания на основе бизнес-драйверов и в соответствии с выбранной стратегией. При планировании расписания позволяет учитывать индивидуальные пожелания и квалификацию сотрудников, требования трудового законодательства и корпоративной политики.</div>
+							<div class="know__ul ul">
+								<ul>
+									<li>Построение графиков;</li>
+									<li>Управление изменениями;</li>
+									<li>Планирование численности персонала;</li>
+									<li>Суммированный учёт.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="know__item row">
+						<div class="know__img col"><img src="upload/know/recreation.png" alt=""></div>
+						<div class="know__content col">
+							<div class="know__subtitle">Как планировать отпуска и <br />учитывать отсутствия</div>
+							<div class="know__text">Модуль «Управление отсутствиями» позволяет планировать и управлять доступностью персонала с возможностью использования различных схем согласования.</div>
+							<div class="know__ul ul">
+								<ul>
+									<li>Планирование периода отпусков в соответствии с бизнес-драйверами;</li>
+									<li>Учёт больничных;</li>
+									<li>Учёт отсутствий;</li>
+									<li>Автоматизация процесса согласований отпусков.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="know__item row">
+						<div class="know__img col"><img src="upload/know/work.png" alt=""></div>
+						<div class="know__content col">
+							<div class="know__subtitle">Как работают ваши люди</div>
+							<div class="know__text">Модуль «Ведение табелей» служит для достоверного учёта фактически отработанного времени с различными схемами подтверждения информации.</div>
+							<div class="know__ul ul">
+								<ul>
+									<li>Выявление мошенничества;</li>
+									<li>Возможность интеграции с биометрическими системами;</li>
+									<li>Формирование табеля;</li>
+									<li>Повышение трудовой дисциплины.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="know__item row">
+						<div class="know__img col"><img src="upload/know/administration.png" alt=""></div>
+						<div class="know__content col">
+							<div class="know__subtitle">Как повысить качество исполнения административных задач</div>
+							<div class="know__text">Модуль «Управление заданиями» обеспечивает эффективное управление поручениями и административными задачами как на уровне конкретного исполнителя, так и целого подразделения.</div>
+							<div class="know__ul ul">
+								<ul>
+									<li>Разграничение задач;</li>
+									<li>Контроль исполнения задач;</li>
+									<li>Управление статусами и комментарии;</li>
+									<li>Автоматическая система уведомлений.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="know__item row">
+						<div class="know__img col"><img src="upload/know/search.png" alt=""></div>
+						<div class="know__content col">
+							<div class="know__subtitle">Как найти узкие места и <br />точки роста</div>
+							<div class="know__text">Модуль «Аналитика» позволяет получать оперативную аналитическую отчётность по ключевым показателям, сменам и фактическому учёт времени сотрудников.</div>
+							<div class="know__ul ul">
+								<ul>
+									<li>Фиксированная отчётность;</li>
+									<li>Аналитика по ключевым процессам и бизнес-драйверам;</li>
+									<li>Анализ «что- если»;</li>
+									<li>Мониторинг «красных зон».</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="know__form">
+					<div class="input center"><input type="text" placeholder="Ваше имя"><i class="icon icon-persona"></i></div>
+					<div class="input center"><input type="text" placeholder="e-mail"><i class="icon icon-mail"></i></div>
+					<button class="know__button button button_orange block center"><span>Получить буклет</span></button>
+				</div>
+			</div>
+		</section>
+		<section class="section reviews">
+			<div class="container">
+				<div class="reviews__title title">Отзывы</div>
+				<div class="reviews__list">
+					<div class="review row">
+						<div class="review__img col"><img src="upload/reviews/1.png" alt=""></div>
+						<div class="review__content col">
+							<div class="review__subtitle">Иван иванов</div>
+							<div class="review__desc">Директор компании</div>
+							<div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</div>
+							<a href="#" target="_blank" class="review__button button button_transparent">История успеха</a>
+						</div>
+					</div>
+					<div class="review row">
+						<div class="review__img col"><img src="upload/reviews/2.png" alt=""></div>
+						<div class="review__content col">
+							<div class="review__subtitle">Иван иванов</div>
+							<div class="review__desc">Директор компании</div>
+							<div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</div>
+							<a href="#" target="_blank" class="review__button button button_transparent">История успеха</a>
+						</div>
+					</div>
+					<div class="review row">
+						<div class="review__img col"><img src="upload/reviews/3.png" alt=""></div>
+						<div class="review__content col">
+							<div class="review__subtitle">Иван иванов</div>
+							<div class="review__desc">Директор компании</div>
+							<div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</div>
+							<a href="#" target="_blank" class="review__button button button_transparent">История успеха</a>
+						</div>
+					</div>
+					<div class="review row">
+						<div class="review__img col"><img src="upload/reviews/1.png" alt=""></div>
+						<div class="review__content col">
+							<div class="review__subtitle">Иван иванов</div>
+							<div class="review__desc">Директор компании</div>
+							<div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</div>
+							<a href="#" target="_blank" class="review__button button button_transparent">История успеха</a>
+						</div>
+					</div>
+					<div class="review row">
+						<div class="review__img col"><img src="upload/reviews/2.png" alt=""></div>
+						<div class="review__content col">
+							<div class="review__subtitle">Иван иванов</div>
+							<div class="review__desc">Директор компании</div>
+							<div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</div>
+							<a href="#" target="_blank" class="review__button button button_transparent">История успеха</a>
+						</div>
+					</div>
+					<div class="review row">
+						<div class="review__img col"><img src="upload/reviews/3.png" alt=""></div>
+						<div class="review__content col">
+							<div class="review__subtitle">Иван иванов</div>
+							<div class="review__desc">Директор компании</div>
+							<div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</div>
+							<a href="#" target="_blank" class="review__button button button_transparent">История успеха</a>
+						</div>
+					</div>
+				</div>
+				<div class="partners">
+					<div class="partner"><img src="upload/partners/amazon.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/skyscanner.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/tnw.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/vimeo.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/rfmax.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/amazon.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/skyscanner.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/tnw.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/vimeo.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/rfmax.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/amazon.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/skyscanner.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/tnw.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/vimeo.png" alt=""></div>
+					<div class="partner"><img src="upload/partners/rfmax.png" alt=""></div>
+				</div>
+			</div>
+		</section>
+		<section class="section plans shadow">
+			<div class="container">
+				<div class="plans__title title">Выбери свой ZOZO</div>
+				<div class="plans__desc subtitle">Варианты подписки на решение</div>
+				<div class="plans__list row">
+					<div class="plan col">
+						<div class="plan__title">:ZOZO WFM</div>
+						<div class="plan__desc">Оперативное управление трудовыми ресурсами</div>
+						<div class="plan__img"><img src="upload/plans/1.png" alt=""></div>
+						<div class="plan__ul ul">
+							<ul>
+								<li>Составление графиков работы на основе исторических данных с учетом требований ТК РФ, квалификации, навыков, расположения, стоимости</li>
+								<li>Управление изменениями в графиках</li>
+								<li>Автоматическая систем уведомлений об изменениях графика</li>
+								<li>Учет рабочего времени сотрудников</li>
+								<li>Оценка эффективности</li>
+							</ul>
+						</div>
+					</div>
+					<div class="plan col">
+						<div class="plan__title">ZOZO RCAM</div>
+						<div class="plan__desc">Стратегическое управление трудовыми ресурсами</div>
+						<div class="plan__img"><img src="upload/plans/2.png" alt=""></div>
+						<div class="plan__ul ul">
+							<ul>
+								<li>Долгосрочный прогноз ключевых показателей определяющих численность сотрудников и качество сервиса</li>
+								<li>Определение стратегии управления (оптимизация ФОТ, управление качеством сервиса)</li>
+								<li>Планирование бюджета на трудовые ресурсы</li>
+							</ul>
+						</div>
+					</div>
+					<div class="plan col">
+						<div class="plan__title">ZOZO RCAM+</div>
+						<div class="plan__desc">Бизнес-акселераторы</div>
+						<div class="plan__img"><img src="upload/plans/3.png" alt=""></div>
+						<div class="plan__ul ul">
+							<ul>
+								<li>Ведение индивидуальных графиков работы сотрудников</li>
+								<li>Возможность привлечение сотрудников на неполную занятость (партайм)</li>
+								<li>Использование гибких смен</li>
+								<li>Биржа смен (возможность обмена смен между сотрудниками)</li>
+								<li>Распределение сотрудников между офисами</li>
+								<li>Оперативная отчетность</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<a href="#contacts" class="plans__button button button_orange center go-contacts block"><span>Получить предложение</span></a>
+			</div>
+		</section>
+		<section class="section vs">
+			<div class="container">
+				<div class="vs__title title">WFM vs RCAM</div>
+				<div class="vs__desc subtitle">ZOZO больше, чем WFM</div>
+				<div class="vs__list row">
+					<div class="vs__left col">
+						<div class="vs__item">Автоматизация <br />процесса расчёта смен</div>
+						<div class="vs__item">На основе стандартных <br />процессов</div>
+						<div class="vs__item">Статичная <br />модель</div>
+						<div class="vs__item">Краткосрочное <br />планирование</div>
+						<div class="vs__item">Ретроспективный <br />прогноз</div>
+						<div class="vs__item">Анализ прошедших <br />периодов</div>
+					</div>
+					<div class="vs__right right col">
+						<div class="vs__item">Реинжиниринг процессов и <br />исполнение бизнес-показателей</div>
+						<div class="vs__item">На основе индивидуальной <br />методологии</div>
+						<div class="vs__item">Динамическое управление <br />показателями</div>
+						<div class="vs__item">Формирование долгосрочной <br />стратегии</div>
+						<div class="vs__item">Предиктивные сценарии <br />прогнозирования</div>
+						<div class="vs__item">Бизнес-аналитика в реальном <br />времени</div>
+					</div>
+				</div>
+				<a href="#contacts"  class="vs__button button button_orange center go-contacts block"><span>Узнать больше</span></a>
+			</div>
+		</section>
+		<section class="section way">
+			<div class="container">
+				<div class="way__title title">Путь ZOZO</div>
+				<div class="way__desc subtitle">Основные этапы проекта трансформации.</div>
+				<div class="way__text center">Мы не внедряем очередную ИТ-систему и не сдаем очередной ИТ-проект. Мы вместе с заказчиком формируем новые процессы и модели управления, для снижение экономических потерь от ошибок планирования трудовых ресурсов.</div>
+				<div class="way__list row row_3">
+					<div class="way__item col">
+						<div class="way__wrap">
+							<div class="way__subtitle">Анализ существующего процесса (AS IS)</div>
+							<div class="way__ul ul">
+								<ul>
+									<li>Анализ текущего процесса и показателей;</li>
+									<li>Проведение замеров;</li>
+									<li>Gap-анализ;</li>
+									<li>Согласование основных метрик и целей проекта.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="way__item col">
+						<div class="way__wrap">
+							<div class="way__subtitle">Создание нового процесса <br />(TOBE)</div>
+							<div class="way__ul ul">
+								<ul>
+									<li>Разработка будущего процесса;</li>
+									<li>Разработка методологии и модели;</li>
+									<li>Прототипирование;</li>
+									<li>Расчёт экономического эффекта.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="way__item col">
+						<div class="way__wrap">
+							<div class="way__subtitle">Управление изменениями бизнес-процессов</div>
+							<div class="way__ul ul">
+								<ul>
+									<li>Разработка плана мероприятий по внедрению процессов;</li>
+									<li>Создание соответствующего контента и проведение обучающих мероприятий;</li>
+									<li>Разработка административных политик;</li>
+									<li>Контроль за исполнением процесса.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section technologies shadow">
+			<div class="container">
+				<div class="technologies__title title">Технологии и инновации ZOZO</div>
+				<div class="technologies__content row row_2">
+					<div class="technologies__left col">Уникальность разработанного решения заключается в методологии реинжиниринга процессов и использовании собственных математических моделей. Команда разработчиков ABS Solutions состоит из ученых и специалистов в области теории оптимального управления, системной инженерии и математического моделирования, часть из которых являются членами Международного совета системных инженеров (INCOSE). Понимая возможности математической модели и реальные бизнес-задачи, команда предложила многомасштабный подход к управлению ресурсами. В основу нового подхода заложен опыт моделирования процессов в нанотехнологиях, полученный членами команды в исследовательских проектах Уральского федерального университета, где для дизайна наноматериалов было необходимо предваритель</div>
+					<div class="technologies__right col">но рассчитывать свойства в молекулярном и, одновременно, в макроскопическом масштабе.В целях развития плодотворного сотрудничества в Уральском федеральном университете в 2017 году была создана совместная с ABC Solutions научная лаборатория моделирования и оптимизации сложных систем. Сегодня она сотрудничает с такими научно-исследовательскими организациями, как Международный институт прикладного системного анализа (IIASA, Вена), Университет Брюнеля (Лондон), Университет Монаша (Мельбурн, Австралия), Сколтех (Москва). Использование столь мощного математического аппарата и лучших мировых практик моделирования сложных систем делает решение ZOZO RCAM по-настоящему инновационным.</div>
+				</div>
+			</div>
+		</section>
+		<section class="section solutions">
+			<div class="container">
+				<div class="solutions__title title">Отраслевые решения на <br />платформе ZOZO RCAM</div>
+				<div class="solutions__desc subtitle">У каждой отрасли свои показатели и бизнес-драйверы. <br />Мы разработали решения для разных сегментов рынка.</div>
+				<div class="solutions__list row row_4 row_inline">
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-bank"></i></div>
+						<div class="solution__text">Банки</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-cart"></i></div>
+						<div class="solution__text">Супермаркеты</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-mark"></i></div>
+						<div class="solution__text">Торговые сети</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-azs"></i></div>
+						<div class="solution__text">АЗС</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-delivery"></i></div>
+						<div class="solution__text">Транспорт и логистика</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-hotel"></i></div>
+						<div class="solution__text">Гостиницы</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-restoran"></i></div>
+						<div class="solution__text">Рестораны</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-cup"></i></div>
+						<div class="solution__text">Спорт и развлечения</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-telecom"></i></div>
+						<div class="solution__text">Телеком ритейл</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-config"></i></div>
+						<div class="solution__text">Профессиональные <br />услуги</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-heart"></i></div>
+						<div class="solution__text">Здравоохранение</div>
+					</div>
+					<div class="solution col">
+						<div class="solution__icon"><i class="icon icon-sheild"></i></div>
+						<div class="solution__text">Страхование</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section news shadow">
+			<div class="container">
+				<div class="news__title title">Новости и публикации</div>
+				<div class="news__list row">
+					<div class="news__item col">
+						<a href="#" class="news__wrap">
+							<div class="news__date">20/09/2016</div>
+							<div class="news__img"><img src="upload/news/1.png" alt=""></div>
+							<div class="news__subtitle">От стартапа до Фейсбука — взгляд на оценку эффективности</div>
+						</a>
+					</div>
+					<div class="news__item news__item_double col">
+						<a href="#" class="news__wrap">
+							<div class="news__date">20/09/2016</div>
+							<div class="news__img"><img src="upload/news/2.png" alt=""></div>
+							<div class="news__subtitle">От стартапа до Фейсбука — взгляд на оценку эффективности</div>
+						</a>
+					</div>
+					<div class="news__item col">
+						<a href="#" class="news__wrap">
+							<div class="news__date">20/09/2016</div>
+							<div class="news__img"><img src="upload/news/3.png" alt=""></div>
+							<div class="news__subtitle">От стартапа до Фейсбука — взгляд на оценку эффективности</div>
+						</a>
+					</div>
+					<div class="news__item col">
+						<a href="#" class="news__wrap">
+							<div class="news__date">20/09/2016</div>
+							<div class="news__img"><img src="upload/news/4.png" alt=""></div>
+							<div class="news__subtitle">От стартапа до Фейсбука — взгляд на оценку эффективности</div>
+						</a>
+					</div>
+					<div class="news__item col">
+						<a href="#" class="news__wrap">
+							<div class="news__date">20/09/2016</div>
+							<div class="news__img"><img src="upload/news/5.png" alt=""></div>
+							<div class="news__subtitle">От стартапа до Фейсбука — взгляд на оценку эффективности</div>
+						</a>
+					</div>
+				</div>
+				<div class="news__button button button_orange center"><span>Все новости</span></div>
+			</div>
+		</section>
+		<section class="section contacts" id="contacts">
+			<div class="container">
+				<div class="contacts__wrap">
+					<div class="contacts__title title">Контакты</div>
+					<div class="contacts__phone subtitle"><a href="">+7 495 105-97-53</a></div>
+					<div class="contacts__email subtitle"><a href="">info@zozowfm.com</a></div>
+					<div class="contacts__address subtitle">Россия, Москва, ул.Садовническая, д.18</div>
+					<div class="contacts__form">
+						<div class="input"><input type="text" placeholder="Ваше имя"><i class="icon icon-persona"></i></div>
+						<div class="input"><input type="text" placeholder="e-mail"><i class="icon icon-mail"></i></div>
+						<div class="textarea"><textarea placeholder="Ваше сообщение"></textarea><i class="icon icon-comment"></i></div>
+						<button class="contacts__button button button_orange center block"><span>отправить</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="contacts__map" id="map"></div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container row">
+			<div class="copy col">© 2017 ZOZO</div>
+			<div class="socials col right">
+				<ul>
+					<li><a href=""><i class="icon icon-facebook"></i></a></li>
+					<li><a href=""><i class="icon icon-linkedin"></i></a></li>
+					<li><a href=""><i class="icon icon-youtube"></i></a></li>
+					<li><a href=""><i class="icon icon-goolge-plus"></i></a></li>
+					<li><a href=""><i class="icon icon-twitter"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script src="http://vjs.zencdn.net/6.2.0/video.js"></script>
+	<div class="randomQuotes">
+		<p>Создаём методологию</p>
+		<p>Увеличиваем доходность</p>
+		<p>Снижаем затраты</p>
+		<p>Оптимизируем ресурсы</p>
+	</div>
+</body>
+</html>
