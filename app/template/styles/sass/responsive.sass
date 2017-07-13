@@ -13,3 +13,416 @@
 @media screen and (max-width: 1450px)
 	.technologies
 		background-image: none
+
+@media screen and (max-width: 1041px)
+	.wow
+		animation: none !important
+	.container
+		width: 768px
+	.title
+		font-size: 40px
+	.subtitle
+		font-size: 26px
+	.panel
+		&__nav
+			li
+				margin-left: 30px
+	.header
+		&__title
+			padding-top: 30px
+			padding-bottom: 40px
+		&__desc
+			margin-bottom: 42px
+			font-size: 30px
+	.word
+		&.first.active, &.active
+			display: block
+
+
+	.num
+		&__count
+			display: block
+			margin-left: auto
+			margin-right: auto
+		&__text
+			display: block
+			margin-left: 0
+			width: 100%
+			height: 70px
+			vertical-align: top
+			text-align: center
+			padding-left: 5px
+			padding-right: 5px
+			p
+				padding-top: 10px
+				height: 70px
+				vertical-align: top
+
+	.func
+		&__list
+			width: 100%
+			background: none
+		&__item
+			left: auto !important
+			right: auto !important
+		&__left
+			text-align: left !important
+			.func
+				&__text
+
+				&__item
+					&:last-of-type
+						.func__text
+							width: 170px
+							margin-left: 0
+	.know
+		&__title
+			padding-top: 30px
+		&__img, &__content
+			float: none !important
+			width: 100%
+		&__img
+			margin-left: auto !important
+			margin-right: auto !important
+			img
+				margin-left: auto
+				margin-right: auto
+		&__item
+			padding-top: 25px
+			padding-bottom: 25px
+		&__subtitle
+			margin-top: 10px
+			text-align: center
+		&__text
+			br
+				display: none
+
+	.plans
+		padding-bottom: 70px
+		&__title
+			padding-top: 30px
+		&__desc
+			margin-bottom: 15px
+	.plan
+		float: none
+		margin-left: auto
+		margin-right: auto
+		width: 100% !important
+		max-width: 320px
+		margin-bottom: 100px
+		height: auto !important
+		padding-top: 20px
+		&:last-of-type
+			margin-bottom: 0
+		&__title
+			padding-top: 0 !important
+		&__button
+			display: block !important
+			bottom: -70px
+	.reviews
+		padding-bottom: 10px
+		&__title
+			padding-top: 25px
+			padding-bottom: 25px
+		&__list
+			margin-bottom: 20px
+
+	.review
+		&__button
+			height: 28px
+			top: 20px
+			bottom: 0
+
+	.vs
+		padding-bottom: 30px
+		&__title
+			padding-top: 30px
+		&__desc
+			margin-bottom: 25px
+		&__left
+			margin-bottom: 20px
+		&__right
+
+		&__left, &__right
+			float: none
+			max-width: 450px
+			width: 100%
+			background: none
+			background-size: auto 30%
+			margin-left: auto
+			margin-right: auto
+		&__item
+			text-align: left !important
+			padding-left: 63px !important
+			padding-right: 0 !important
+			&:before
+				left: 0 !important
+				right: auto !important
+
+	.way
+		background-size: cover
+		padding-bottom: 30px
+		&__text
+			&:after
+				width: 100%
+				height: 95px
+				background-repeat: no-repeat
+				background-size: 100%
+				left: 0
+				margin-top: 25px
+		&__item
+			float: none
+			width: 100% !important
+			margin-bottom: 25px
+			&:last-of-type
+				margin-bottom: 0
+		&__wrap
+			width: 100%
+			height: auto
+			max-width: 450px
+			margin-left: auto
+			margin-right: auto
+			padding-top: 15px
+		&__subtitle
+			margin-bottom: 15px
+
+	.technologies
+		padding-bottom: 25px
+		&__content
+			font-size: 0
+			margin-left: 0 !important
+			margin-right: 0 !important
+		&__title
+			padding-top: 30px
+			padding-bottom: 25px
+		.col
+			float: none
+			display: inline
+			font-size: 16px
+			padding-left: 0
+			padding-right: 0
+	.news
+		padding-bottom: 30px
+		&__title
+			padding-top: 30px
+			padding-bottom: 25px
+			text-align: center
+		&__subtitle
+			max-width: 255px !important
+			text-align: left
+		&__list
+			text-align: center
+		&__item
+			width: 320px
+			display: inline-block
+			float: none
+			overflow: hidden
+			margin-bottom: 14px
+		&__img
+			width: 300px
+			overflow: hidden
+			img
+				transform: none !important
+		&__button
+			margin-top: 0
+
+@media screen and (max-width: 845px)
+	.reviews
+		&__list
+			.slick-arrow
+				display: none !important
+
+@media screen and (max-width: 790px)
+	.container
+		width: 100%
+	.panel
+		position: relative
+		padding-top: 3px
+		padding-bottom: 2px
+		&__content
+			display: none
+			position: absolute
+			top: 100%
+			left: 0
+			width: 100%
+			text-align: center
+			background: white
+			padding-bottom: 15px
+			border-bottom: 2px solid #f16032
+		&__phone
+			display: block
+			margin-bottom: 5px
+		&__nav
+			li
+				display: block
+				margin-left: 0
+				margin-bottom: 5px
+				&:last-of-type
+					margin-bottom: 0
+			a
+				&:after
+					display: none
+		&__menu-btn
+			display: block
+	.title, .word i
+		font-size: 36px
+		line-height: normal
+	.header
+		margin-top: 0
+		padding-bottom: 30px
+		&__title
+			padding-top: 20px
+			padding-bottom: 10px
+		&__desc
+			margin-bottom: 20px
+	.video
+		&__title
+			margin-bottom: 20px
+		&__button
+			margin-bottom: 30px
+		&__wrap
+			background: none
+			width: auto
+			height: auto
+		.video-js
+			top: 0
+			.vjs-big-play-button
+				top: 127px
+	.words-wrapper
+		display: none
+
+	.nums
+		padding-top: 30px
+		padding-bottom: 30px
+		&__text
+			margin-top: 20px
+	.num
+		width: 50% !important
+		margin-top: 20px
+	.func
+		padding-bottom: 30px
+		&__title
+			padding-top: 30px
+			padding-bottom: 20px
+	.review
+		height: auto
+		padding: 15px
+		&__content
+			background: none
+			padding: 0
+		&__img, &__content
+			float: none
+			margin-right: auto
+			margin-left: auto
+			height: auto
+		&__button
+			display: block
+			margin-top: 10px
+			position: relative
+			top: auto
+			right: auto
+			margin-left: auto
+			margin-right: auto
+		&__content
+			width: 100%
+			margin-top: 10px
+	.solution
+		width: 50% !important
+		height: 160px
+		margin-bottom: 0
+	.footer
+		.col
+			float: none
+			width: 100%
+			text-align: center !important
+			margin-bottom: 20px
+			&:last-of-type
+				margin-bottom: 0
+@media screen and (max-width: 620px)
+	.func
+		&__left, &__right
+			float: none 
+			width: 100%
+		&__text
+			text-align: center
+			margin-left: 0 !important
+		&__item
+			display: block
+			width: 100%
+			margin-bottom: 20px
+		&__icon, &__text
+			float: none !important
+			margin-left: auto !important
+			margin-right: auto !important
+		&__text
+			padding-top: 10px !important
+			text-align: center !important
+			height: auto
+		&__right
+			margin-top: 20px
+	.way__text
+		margin-bottom: 20px
+		&:after
+			display: none
+	
+@media screen and (max-width: 550px)
+	.my-video-dimensions
+		width: 100%
+	.video .video-js .vjs-big-play-button
+		top: calc(50% - 22px)
+		left: calc(50% - 45px)
+	.num
+		display: block
+		width: 100% !important
+		margin-top: 25px
+		&__text
+			height: auto
+	.know__img
+		img
+			max-width: 100%
+	.know__subtitle
+		margin-bottom: 10px
+@media screen and (max-width: 470px)
+	.vs
+		&__left, &__right
+			padding: 15px
+		&__item
+			height: auto
+			padding-left: 55px !important
+			width: 100%
+			font-size: 16px
+			margin-bottom: 20px
+			// br
+			// 	display: none
+@media screen and (max-width: 450px)
+	.func__title
+		font-size: 30px
+@media screen and (max-width: 420px)
+	.my-video-dimensions
+		width: 100%
+		height: 200px
+
+	.title, .word i
+		font-size: 30px
+	.subtitle
+		font-size: 24px
+	.solution
+		width: 100% !important
+		height: auto
+		margin-bottom: 20px
+	.func__title
+		font-size: 24px
+	.nums__title
+		font-size: 29px
+@media screen and (max-width: 370px)
+	.plan__img
+		img
+			max-width: 100%
+
+@media screen and (max-width: 350px)
+	.news__item
+		width: 275px
+		padding-left: 0
+		padding-right: 0
+	.news__subtitle
+		max-width: 240px

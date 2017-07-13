@@ -2,6 +2,8 @@
 @import sprite.sass
 @import "../../libs/slick-carousel/slick/slick.css"
 @import "../../libs/slick-carousel/slick/slick-theme.css"
+@import "../../libs/animate.css/animate.css"
+@import "../../libs/fancybox/dist/jquery.fancybox.css"
 
 /* Including fonts */
 @font-face
@@ -63,6 +65,7 @@ li, .inline-block
 h1, h2, h3, h4, h5, h6
 	font-size: inherit
 	font-weight: inherit
+	display: inline-block
 
 
 ul
@@ -255,15 +258,45 @@ a
 	font-size: 30px
 
 
+.popups
+	display: none
+
+.popup
+	max-width: 600px
+	border-radius: 5px
+	&__title
+		margin-bottom: 10px
+		text-align: center
+		font-size: 28px
+		font-weight: 900
+	p
+		margin-bottom: 10px
+		&:last-of-type
+			margin-bottom: 0
+
+
+
+.privacy-policy
+	font-size: 12px
+	input
+		position: relative
+		top: 2px
+	a
+		border-color: $color-1
+
+
 .panel
-	position: relative
+	z-index: 999
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
 	background: white
 	background-color: #ffffff
 	padding-top: 14px
 	padding-bottom: 9px
 	font-family: NotoSans
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
-	z-index: 2
 	&__logo
 		padding-top: 3px
 	&__content
@@ -326,12 +359,42 @@ a
 				background-color: #7f8c8d
 				left: calc(50% - 12.5px)
 				bottom: -4px
+	&__menu-btn
+		display: none
+		float: right
+		width: 35px
+		height: 24px
+		margin-top: 10px
+		cursor: pointer
+		
+		span
+			position: relative
+			display: block
+			background: #f16032
+			width: 100%
+			height: 4px
+			margin-bottom: 6px
+			transition: .3s
+			&:last-of-type
+				margin-bottom: 0
+		&.active
+			span
+				&:nth-of-type(1)
+					top: 10px
+					transform: rotate(45deg)
+				&:nth-of-type(2)
+					opacity: 0
+				&:nth-of-type(3)
+					top: -10px
+					transform: rotate(-45deg)
+
 
 .header
+	margin-top: 70px
 	background: url('../../images/bg/header.png') no-repeat center top
 	&__title
 		padding-top: 90px
-		padding-bottom: 38px
+		padding-bottom: 23px
 	&__desc
 		margin-bottom: 74px
 		text-transform: uppercase
@@ -412,7 +475,6 @@ a
 		left: 5px
 		top: 5px
 		padding-top: 15px
-		z-index: 2
 		width: 70px
 		height: 70px
 		background: white
@@ -439,10 +501,10 @@ a
 			margin-bottom: 0
 	&__text
 		height: 80px
+		width: 170px
 		font-size: 18px
 		font-weight: 700
 		line-height: 21px
-		margin-right: 20px
 		padding-top: 19px
 		text-align: right
 		&.pt
@@ -461,21 +523,18 @@ a
 			&__item
 				&:last-of-type
 					left: 20px
-					.func__text
-						margin-right: 0
-						margin-left: 40px
+			&__text
+				margin-left: 5px
 	&__right
 		.func
 			&__item
 				&:last-of-type
 					right: 20px
-					.func__text
-						margin-left: 0
-						margin-right: 80px
 			&__icon
 				float: left
 			&__text
 				float: right
+				text-align: left
 .know
 	padding-bottom: 70px
 	&__title
@@ -519,10 +578,13 @@ a
 		color: #7f8c8d
 		padding-left: 9px
 	&__form
+		max-width: 360px
+		margin-left: auto
+		margin-right: auto
 	&__button
 		max-width: 220px
 		width: 100%
-		margin-top: 40px !important
+		margin-top: 20px !important
 
 .reviews
 	background-color: #f7f7f7
@@ -638,7 +700,7 @@ a
 
 
 .plans
-	padding-bottom: 70px
+	padding-bottom: 115px
 	&__title
 		padding-top: 70px
 		padding-bottom: 20px
@@ -654,12 +716,14 @@ a
 	border-bottom: 4px solid #f05625
 	&:nth-of-type(2)
 		width: 320px
-		z-index: 2
+		z-index: 1
 		box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15)
 		height: 710px
 		.plan
 			&__title
 				padding-top: 20px
+			&__button
+				display: block
 	&:nth-of-type(1), &:nth-of-type(3)
 		width: 310px
 		margin-top: 20px
@@ -689,6 +753,13 @@ a
 	&__ul
 		color: #7f8c8d
 		line-height: 20px
+	&__button
+		display: none
+		position: absolute
+		bottom: -90px
+		left: calc(50% - 130px)
+		max-width: 260px
+		width: 100%
 
 .vs
 	background-color: #f7f7f7
@@ -786,7 +857,7 @@ a
 		line-height: 30px
 		text-transform: uppercase
 		color: #34495e
-		margin-bottom: 38px
+		margin-bottom: 25px
 	&__ul
 		line-height: 20px
 		color: #7f8c8d
@@ -822,6 +893,10 @@ a
 
 .solution
 	margin-bottom: 36px
+	&:hover
+		.solution
+			&__icon
+				border: 2px solid #c74247
 	&__icon
 		width: 80px
 		height: 80px
@@ -832,6 +907,8 @@ a
 		margin-left: auto
 		margin-right: auto
 		margin-bottom: 23px
+		border: 2px solid white
+		transition: .3s
 	&__text
 		font-size: 18px
 		font-weight: 700
@@ -872,9 +949,13 @@ a
 		transition: .3s
 		display: block
 		&:hover
-			.news__img
-				img
-					transform: scale(.95)
+			.news
+				&__img
+					img
+						transform: scale(.95)
+				&__subtitle
+					font-size: 32px
+					line-height: 36px
 
 	&__date
 		position: absolute
@@ -900,6 +981,7 @@ a
 		bottom: 25px
 		left: 20px
 		max-width: 255px
+		transition: .5s
 	&__button
 		margin-top: 20px
 
@@ -925,8 +1007,10 @@ a
 			color: #f05625
 	&__form
 		margin-top: 25px
+	.privacy-policy
+		margin-top: 20px
 	&__button
-		margin-top: 40px
+		margin-top: 20px
 		max-width: 220px
 		width: 100%
 	&__map
@@ -937,6 +1021,15 @@ a
 .footer
 	padding-top: 28px
 	padding-bottom: 27px
+	&__middle
+		font-size: 14px
+		line-height: 22px
+		text-align: center
+		margin-top: -5px
+		a
+			border-color: $color-1
+			&:hover
+				border-color: transparent
 
 .copy
 	font-family: NotoSans
@@ -946,6 +1039,7 @@ a
 	text-transform: uppercase
 
 .socials
+	text-align: right
 	li
 		margin-left: 26px
 		&:first-of-type
@@ -992,5 +1086,227 @@ a
 	animation-play-state: paused
 	animation-delay: inherit
 
-.randomQuotes
+.quotes
 	display: none
+
+
+
+.word
+	display: inline-block
+	font-size: 0
+	display: none
+	i
+		font-size: 42px
+		animation: letters-rotate-out 0.5s backwards ease-in-out
+		-webkit-transform-style: preserve-3d
+		transform-style: preserve-3d
+		transform: translateZ(-20px) rotateX(90deg)
+		opacity: 0
+		backface-visibility: hidden
+		font-style: normal
+		display: inline-block
+		&.mr
+			margin-right: 10px
+		&:nth-of-type(1)
+			animation-delay: 0.2s
+
+		&:nth-of-type(2)
+			animation-delay: 0.3s
+
+		&:nth-of-type(3)
+			animation-delay: 0.4s
+
+		&:nth-of-type(4)
+			animation-delay: 0.5s
+
+		&:nth-of-type(5)
+			animation-delay: 0.6s
+
+		&:nth-of-type(6)
+			animation-delay: 0.7s
+
+		&:nth-of-type(7)
+			animation-delay: 0.8s
+
+		&:nth-of-type(8)
+			animation-delay: 0.9s
+
+		&:nth-of-type(9)
+			animation-delay: 1s
+
+		&:nth-of-type(10)
+			animation-delay: 1.1s
+
+		&:nth-of-type(11)
+			animation-delay: 1.2s
+
+		&:nth-of-type(12)
+			animation-delay: 1.3s
+
+		&:nth-of-type(13)
+			animation-delay: 1.4s
+
+		&:nth-of-type(14)
+			animation-delay: 1.5s
+
+		&:nth-of-type(15)
+			animation-delay: 1.6s
+		
+		&:nth-of-type(16)
+			animation-delay: 1.7s
+
+		&:nth-of-type(17)
+			animation-delay: 1.8s
+
+		&:nth-of-type(18)
+			animation-delay: 1.9s
+
+		&:nth-of-type(19)
+			animation-delay: 2.0s
+
+		&:nth-of-type(20)
+			animation-delay: 2.1s
+
+		&:nth-of-type(21)
+			animation-delay: 2.2s
+
+		&:nth-of-type(22)
+			animation-delay: 2.3s
+
+		&:nth-of-type(23)
+			animation-delay: 2.4s
+
+		&:nth-of-type(24)
+			animation-delay: 2.5s
+
+		&:nth-of-type(25)
+			animation-delay: 2.6s
+
+		&:nth-of-type(26)
+			animation-delay: 2.7s
+
+		&:nth-of-type(27)
+			animation-delay: 2.8s
+
+		&:nth-of-type(28)
+			animation-delay: 2.9s
+
+		&:nth-of-type(29)
+			animation-delay: 3.0s
+
+		&:nth-of-type(30)
+			animation-delay: 3.1s
+
+		&:nth-of-type(31)
+			animation-delay: 3.2s
+	
+		// display: inline-block
+	&.first.active, &.active
+		display: inline-block
+		i 
+			animation: letters-rotate-in 0.5s forwards ease-in-out
+			&:nth-of-type(1)
+				animation-delay: 0.2s
+
+			&:nth-of-type(2)
+				animation-delay: 0.3s
+
+			&:nth-of-type(3)
+				animation-delay: 0.4s
+
+			&:nth-of-type(4)
+				animation-delay: 0.5s
+
+			&:nth-of-type(5)
+				animation-delay: 0.6s
+
+			&:nth-of-type(6)
+				animation-delay: 0.7s
+
+			&:nth-of-type(7)
+				animation-delay: 0.8s
+
+			&:nth-of-type(8)
+				animation-delay: 0.9s
+
+			&:nth-of-type(9)
+				animation-delay: 1s
+
+			&:nth-of-type(10)
+				animation-delay: 1.1s
+
+			&:nth-of-type(11)
+				animation-delay: 1.2s
+
+			&:nth-of-type(12)
+				animation-delay: 1.3s
+
+			&:nth-of-type(13)
+				animation-delay: 1.4s
+
+			&:nth-of-type(14)
+				animation-delay: 1.5s
+
+			&:nth-of-type(15)
+				animation-delay: 1.6s
+			
+			&:nth-of-type(16)
+				animation-delay: 1.7s
+
+			&:nth-of-type(17)
+				animation-delay: 1.8s
+
+			&:nth-of-type(18)
+				animation-delay: 1.9s
+
+			&:nth-of-type(19)
+				animation-delay: 2.0s
+
+			&:nth-of-type(20)
+				animation-delay: 2.1s
+
+			&:nth-of-type(21)
+				animation-delay: 2.2s
+
+			&:nth-of-type(22)
+				animation-delay: 2.3s
+
+			&:nth-of-type(23)
+				animation-delay: 2.4s
+
+			&:nth-of-type(24)
+				animation-delay: 2.5s
+
+			&:nth-of-type(25)
+				animation-delay: 2.6s
+
+			&:nth-of-type(26)
+				animation-delay: 2.7s
+
+			&:nth-of-type(27)
+				animation-delay: 2.8s
+
+			&:nth-of-type(28)
+				animation-delay: 2.9s
+
+			&:nth-of-type(29)
+				animation-delay: 3.0s
+
+			&:nth-of-type(30)
+				animation-delay: 3.1s
+
+			&:nth-of-type(31)
+				animation-delay: 3.2s
+
+@keyframes letters-rotate-in
+	0%
+		opacity: 0
+		transform: translateZ(-20px) rotateX(90deg)
+	
+	60%
+		opacity: 1
+		transform: translateZ(-20px) rotateX(-10deg)
+	
+	100%
+		opacity: 1
+		transform: translateZ(-20px) rotateX(0deg)
